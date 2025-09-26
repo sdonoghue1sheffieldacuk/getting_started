@@ -1,0 +1,44 @@
+# init condiions 
+seed = [1]
+maxrows = 7
+count = 0 
+
+#calculate new row from the current
+def pascal_row(seed):
+    max = len(seed)-1
+    i = max # the cell we are working on 
+    iprime = max-1 # the cell to the left of it 
+    new_row = [1]
+    while iprime >=0: # check that the left cell hasn't over flowed as working forom right 
+        rmost = seed[i]
+        rmostpair = seed[iprime]
+        i -=1
+        iprime =i-1
+        new_row.append(rmost+rmostpair)
+    new_row.append(1)
+    return new_row
+
+# main driver loop 
+new_row = seed
+while count < maxrows:
+    count +=1
+    if count == 1: 
+        print(new_row)
+    else:
+        new_row = pascal_row(new_row)
+        print(new_row)
+
+
+
+'''
+def my_func(thing):
+    thing.extend([5,6])
+    return thing 
+
+original = [1,2,3,4]
+print(original)
+
+result = my_func(original)
+print(result)
+print(original)
+'''

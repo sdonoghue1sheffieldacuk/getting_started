@@ -1,0 +1,88 @@
+import random
+target = random.randint(1,64)
+guess = 0
+while guess != target:
+    if(guess > target ):
+        print(f"your guess of {guess} is greater than the target")
+    elif(guess < target):
+        print(f"your guess of {guess} is less than the target")
+    guess = int(input("care to guess again?"))
+
+print(f"you got it, {guess}")
+# seriously, we write comments header comments at the top of every file?
+#
+# student id : 6893479032
+user_name = input("your name")
+names = ["alvin","simon","theodore","dave","britney"]
+if user_name in names:
+    print(f"welcome {user_name}")
+else:
+    print("youre name is not on the list")
+names =[]
+stri =""
+for n in names :
+    stri += f"Goodnight {n} ," 
+    #print(f"Goodnight {n}")
+if(len(stri)>0):
+    print(stri)
+
+our_list = [1,2,3,4,5,6]
+
+your_list = [3,3,3,1,3]
+
+my_list = [1,2,3,4,5]
+#for thing in my_list:
+#    print(thing, end=',')
+    
+print("Goodbye!")    
+
+
+
+for item in your_list:
+    print(item)
+
+    
+print(our_list)
+
+while(len(your_list)>0):
+    item = your_list[0]
+    our_list.insert(item,item)
+    your_list.pop(0)
+
+
+""" i = 0
+while i<len(your_list):
+    #our_list.append(your_list[i])
+    item = your_list[i]
+    our_list.insert(item,item)
+    i+=1 """
+
+print(our_list)
+
+
+"""
+
+count = int(input("count down from: "))
+
+while(count > 1):
+    print(f"{count} seconds and counting")
+    count -=1
+else:
+    print(f"{count} second and counting")
+
+print("we have lift off!")
+"""
+
+"""hhhhhh """
+'''
+if(False):
+    x = int(input("gimme a number:"))
+    if x>100 :
+        print("huge")
+    elif x>10 :
+        print("large")
+    elif x<0 :
+        print("negative")
+    else :
+        print("small")
+'''
